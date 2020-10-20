@@ -13,6 +13,7 @@ public class Iqbal {
 
     public void hallo(String teks) {
         System.out.println("Latihan merge");
+        System.out.println("Tessss");
         System.out.println(teks);
     }
 }
