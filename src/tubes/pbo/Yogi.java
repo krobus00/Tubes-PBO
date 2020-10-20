@@ -15,6 +15,7 @@ public class Yogi {
     private int attack;
     public void heal(int i){
         this.darah += i;
+        this.attack-= i;
     }
     public void ultimate(){
         this.attack = 10000;
