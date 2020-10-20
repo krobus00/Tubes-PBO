@@ -12,4 +12,9 @@ package tubes.pbo;
 public class Michael {
     private int bil;
     private double bil2;
+    
+    public void test(){
+        this.bil = 0;
+        System.out.println(bil);
+    }
 }
