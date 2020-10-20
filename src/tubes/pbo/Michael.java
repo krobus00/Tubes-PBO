@@ -17,4 +17,8 @@ public class Michael {
         this.bil = 0;
         System.out.println(bil);
     }
+    
+    public void print(String teks){
+        System.out.println(teks);
+    }
 }
