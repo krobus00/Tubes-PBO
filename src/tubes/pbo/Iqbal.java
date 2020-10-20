@@ -12,6 +12,7 @@ package tubes.pbo;
 public class Iqbal {
 
     public void hallo(String teks) {
+        System.out.println("Latihan merge");
         System.out.println(teks);
     }
 }
