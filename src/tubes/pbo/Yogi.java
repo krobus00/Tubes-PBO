@@ -15,4 +15,7 @@ public class Yogi {
     public void heal(int i){
         this.darah += i;
     }
+    public void ultimate(){
+        this.darah = 100;
+    }
 }
