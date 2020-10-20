@@ -12,10 +12,12 @@ package tubes.pbo;
 public class Yogi {
     private int yogi;
     private int darah;
+    private int attack;
     public void heal(int i){
         this.darah += i;
     }
     public void ultimate(){
+        this.attack = 10000;
         this.darah = 100;
     }
 }
