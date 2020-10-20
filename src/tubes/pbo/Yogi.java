@@ -11,4 +11,8 @@ package tubes.pbo;
  */
 public class Yogi {
     private int yogi;
+    private int darah;
+    public void heal(int i){
+        this.darah += i;
+    }
 }
