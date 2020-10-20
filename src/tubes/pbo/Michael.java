@@ -21,4 +21,7 @@ public class Michael {
     public void print(String teks){
         System.out.println(teks);
     }
+    public void scan(String teks){
+        
+    }
 }
