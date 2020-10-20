@@ -11,4 +11,5 @@ package tubes.pbo;
  */
 public class Michael {
     private int bil;
+    private double bil2;
 }
