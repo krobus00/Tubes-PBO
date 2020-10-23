@@ -13,7 +13,7 @@ public class Motor extends Kendaraan {
 
     @Override
     void tambahKerusakan(String kerusakan) {
-        System.out.println("ini tambah kerusakan");
+        System.out.println("ini tambah kerusakan motor");
     }
 
     @Override
