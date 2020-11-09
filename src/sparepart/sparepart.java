@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kendaraan;
+package sparepart;
 
 /**
  *
  * @author Krobus
  */
-abstract class Kendaraan {
-
-    abstract void tambahKerusakan(String kerusakan);
-
-    abstract void daftarKerusakan();
-
-    abstract void telahDiperbaiki();
+public class sparepart {
+    
 }
