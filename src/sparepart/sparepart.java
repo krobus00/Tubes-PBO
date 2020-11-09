@@ -10,5 +10,17 @@ package sparepart;
  * @author Krobus
  */
 public class sparepart {
-    
+
+    protected String nama;
+    protected String bagian;
+    protected int harga;
+    protected int jumlah;
+
+    public sparepart(String nama, String bagian, int harga, int jumlah) {
+        this.nama = nama;
+        this.bagian = bagian;
+        this.harga = harga;
+        this.jumlah = jumlah;
+    }
+
 }
