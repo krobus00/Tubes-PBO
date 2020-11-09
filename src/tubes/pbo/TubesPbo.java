@@ -11,8 +11,7 @@ public class TubesPbo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Bengkel Online");
-        System.out.println("Yogi");
+        System.out.println("Aplikasi Bengkel");
     }
 
 }
