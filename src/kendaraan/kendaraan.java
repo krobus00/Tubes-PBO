@@ -9,6 +9,22 @@ package kendaraan;
  *
  * @author REPUBLIC OF GAMERS
  */
-public class kendaraan {
+abstract class kendaraan {
+
+    protected String nomor_kendaraan;
+    protected String status;
+    protected []kerusakan Kerusakan;
+
+    abstract tambahKerusakan(String bagian, int biaya) {
     
+    }
+    abstract updateKerusakan(String bagian, String status){
+    
+    }
+    abstract daftarKerusakan(){
+    
+    }
+    abstract biayaPerbaikan(){
+    
+    }
 }
