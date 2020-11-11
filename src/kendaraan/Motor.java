@@ -9,21 +9,38 @@ package kendaraan;
  *
  * @author REPUBLIC OF GAMERS
  */
-public class Motor extends kendaraan{
-    protected String merk;
-    protected date tanggal;
+public class Motor extends kendaraan implements Jenis {
 
-    public Motor(String nomor_kendaraan) {
+    protected String merk;
+    protected String tanggal;
+
+    public Motor(String nomor_kendaraan, String status, String merk, String tanggal) {
+        super(nomor_kendaraan, status);
+        this.merk = merk;
+        this.tanggal = tanggal;
     }
-    public void tambahKerusakan(String kerusakan, int biaya){
-    
+
+    @Override
+    public void tambahKerusakan(String kerusakan, int biaya) {
+
     }
-    public void updateKerusakan(String bagian, String status){
-    
+
+    @Override
+    public void updateKerusakan(String bagian, String status) {
+
     }
-    public void daftarKerusakan(){
-    
+
+    @Override
+    public void daftarKerusakan() {
+
     }
-    public void detailKendaraan(){
+
+    @Override
+    public void detailKendaraan() {
+    }
+
+    @Override
+    public void biayaPerbaikan() {
+
     }
 }
