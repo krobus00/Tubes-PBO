@@ -13,18 +13,18 @@ abstract class kendaraan {
 
     protected String nomor_kendaraan;
     protected String status;
-    protected []kerusakan Kerusakan;
+    protected Kerusakan[] Kerusakan;
 
-    abstract tambahKerusakan(String bagian, int biaya) {
-    
+    public kendaraan(String nomor_kendaraan, String status) {
+        this.nomor_kendaraan = nomor_kendaraan;
+        this.status = status;
     }
-    abstract updateKerusakan(String bagian, String status){
-    
-    }
-    abstract daftarKerusakan(){
-    
-    }
-    abstract biayaPerbaikan(){
-    
-    }
+
+    public abstract void tambahKerusakan(String bagian, int biaya);
+
+    public abstract void updateKerusakan(String bagian, String status);
+
+    public abstract void daftarKerusakan();
+
+    public abstract void biayaPerbaikan();
 }
