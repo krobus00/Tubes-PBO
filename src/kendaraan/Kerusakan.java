@@ -9,14 +9,15 @@ package kendaraan;
  *
  * @author REPUBLIC OF GAMERS
  */
-abstract class Kerusakan extends kendaraan{
+public class Kerusakan{
     private String bagian;
     private String status;
     private int biaya;
 
-    public Kerusakan(String bagian, int biaya) {
+    public Kerusakan(String bagian, int biaya, String status) {
         this.bagian = bagian;
         this.biaya = biaya;
+        this.status = status;
     }
     public void setStatus(String status) {
         this.status = status;
@@ -24,7 +25,13 @@ abstract class Kerusakan extends kendaraan{
     public String getStatus() {
         return status;
     }
-    public String getKerusakan() {
-        return status;
-    }        
+
+    public String getBagian() {
+        return bagian;
+    }
+
+    public int getBiaya() {
+        return biaya;
+    }
+         
 }
