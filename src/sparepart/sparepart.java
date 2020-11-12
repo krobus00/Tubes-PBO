@@ -9,7 +9,7 @@ package sparepart;
  *
  * @author Krobus
  */
-public class sparepart {
+abstract class sparepart {
 
     protected String nama;
     protected String bagian;
@@ -22,5 +22,6 @@ public class sparepart {
         this.harga = harga;
         this.jumlah = jumlah;
     }
+    abstract public void diskon(int persen);
 
 }
