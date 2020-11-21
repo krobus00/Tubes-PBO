@@ -18,13 +18,22 @@ public class motor extends sparepart implements jenis {
     public int getHarga() {
         return harga;
     }
-
+    public int getHarga(int diskon) {
+        // untuk mendapatkan harga jika didiskon
+        return harga - (harga*diskon/100);
+    }
     public int getJumlah() {
         return jumlah;
     }
 
     @Override
     public void updateJumlah(int i) {
+        // mengubah jumlah sparepart
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public void updateJumlah(int i, int harga) {
+        // mengubah jumlah dan sparepart.
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
