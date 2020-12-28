@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/Controller/ControllerAdmin.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>75</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/helper/Message.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Model/ModelKendaraan.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Manusia/Manusia.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Kendaraan/Pemilik.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Model/ModelManusia.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/View/MontirDashboard.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Admin/Voucher.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Admin/Pembayaran.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/View/AdminDashboard.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Manusia/Montir.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Controller/ControllerAdmin.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Manusia/Auth.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/View/login.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Controller/ControllerPelanggan.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Controller/ControllerDetailKerusakanKendaraanPelanggan.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/View/PelangganDashboard.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Manusia/Pelanggan.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Controller/ControllerLogin.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/View/DetailKerusakanKendaraanMontir.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Controller/ControllerDetailKerusakanKendaraanMontir.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Admin/Sparepart.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Controller/ControllerMontir.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Model/ModelAdmin.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Kendaraan/InterfaceKendaraan.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/helper/Currency.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Kendaraan/Kendaraan.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/View/TambahMontir.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Kendaraan/Kerusakan.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Manusia/AbstractManusia.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Controller/ControllerPembayaranKendaraan.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Admin/AbstractAdmin.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Manusia/InterfaceAuth.java</file>
+            <file>file:/C:/Users/Krobus/Documents/Kuliah/PBO/Tubes-PBO-master/src/Model/InterfaceAdmin.java</file>
+        </group>
+    </open-files>
+</project-private>
