@@ -17,7 +17,7 @@ import java.sql.SQLException;
 public class ControllerLogin implements ActionListener, Controller {
 
     private login view;
-    private ModelManusia model;
+    private ModelManusia model = new ModelManusia();
 
     public ControllerLogin() {
         view = new View.login();
@@ -46,7 +46,6 @@ public class ControllerLogin implements ActionListener, Controller {
                 if (!model.checkUsername(username)) {
                     msg.showMessage("Username tidak ditemukan", "Error", 2);
                 } else {
-
                     model.auth(username, password);
                     if (model.getUser().getNama() == null) {
                         msg.showMessage("Password salah!", "Error", 2);

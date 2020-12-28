@@ -5,20 +5,18 @@
  */
 package Controller;
 
-//import Manusia.Manusia;
-import Manusia.Manusia;
 import Manusia.Auth;
+import Model.ModelManusia;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import View.register;
 
-
 public class ControllerRegistrasi implements ActionListener, Controller {
 
     private register view;
-    private Manusia model;
-    private Auth auth = new Auth();
+    private ModelManusia model = new ModelManusia();
+//    private Auth auth = new Auth();
 
     public ControllerRegistrasi() {
         view = new View.register();
@@ -44,15 +42,13 @@ public class ControllerRegistrasi implements ActionListener, Controller {
         String alamat = view.getAlamat();
 
         if (nama.isEmpty() || username.isEmpty() || password.isEmpty() || alamat.isEmpty()) {
-            msg.showMessage("Data tidak boleh kosong!", "Error", 0);
+            msg.showMessage("Data tidak boleh kosong!", "Error", 2);
         } else {
             try {
-                model = new Manusia(nama, username, password, alamat);
-                if (auth.checkUsername(model.getUsername())) {
+                if (model.checkUsername(model.getUser().getUsername())) {
                     msg.showMessage("Username sudah digunakan", "Error", 2);
                 } else {
-
-                    auth.Registrasi(model);
+                    model.auth(nama, username, password, alamat);
                     msg.showMessage("Registrasi berhasil", "Success", 1);
                 }
             } catch (SQLException e) {

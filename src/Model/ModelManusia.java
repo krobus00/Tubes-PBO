@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class ModelManusia {
 
     private Manusia u;
-    private Auth authentikasi;
+    private Auth authentikasi = new Auth();
     private Pelanggan p;
     private Montir m;
 

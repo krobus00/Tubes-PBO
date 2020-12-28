@@ -11,14 +11,10 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import Manusia.Manusia;
-import Model.ModelKendaraan;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import Kendaraan.Kendaraan;
-import Manusia.Pelanggan;
 import Model.ModelManusia;
 import View.PelangganDashboard;
 
@@ -29,7 +25,6 @@ public class ControllerPelanggan extends MouseAdapter implements ActionListener,
     private ModelManusia model;
     private Manusia u;
     private ArrayList<Kendaraan> daftarKendaraan = new ArrayList<>();
-    private Database db = new Database();
     private int selectedItem;
 
     public ControllerPelanggan(Manusia u) {

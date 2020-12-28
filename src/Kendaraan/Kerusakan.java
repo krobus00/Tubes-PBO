@@ -62,7 +62,6 @@ public class Kerusakan {
                 + "Keterangan : " + keterangan + "\n"
                 + "Status : " + status + "\n"
                 + "Biaya : " + biaya;
-
         return s;
     }
 }

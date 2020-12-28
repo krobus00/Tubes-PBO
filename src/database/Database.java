@@ -7,7 +7,6 @@ package database;
 
 import java.sql.*;
 
-
 public class Database {
 
     protected Connection conn = null;
