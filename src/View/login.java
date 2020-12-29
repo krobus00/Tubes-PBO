@@ -219,5 +219,6 @@ public class login extends javax.swing.JFrame {
         btnLogin.addActionListener(e);
         btnRegis.addActionListener(e);
     }
+    
 
 }

@@ -42,7 +42,7 @@ public class Auth extends Database implements InterfaceAuth{
     @Override
     public Manusia Login(Manusia user) throws SQLException {
         connect();
-        String query = "SELECT * FROM user where username='" + user.getUsername() + "' AND password='" + user.getPassword() + "'";
+        String query = "SELECT * FROM user WHERE username='" + user.getUsername() + "' AND password='" + user.getPassword() + "'";
         rs = stmt.executeQuery(query);
         if (rs.next()) {
             user = new Manusia(
