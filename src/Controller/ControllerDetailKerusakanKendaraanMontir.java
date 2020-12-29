@@ -30,6 +30,7 @@ public class ControllerDetailKerusakanKendaraanMontir extends MouseAdapter imple
     private Manusia u;
     private ModelKendaraan modelKendaraan;
     private Kendaraan k;
+    
     private ArrayList<Sparepart> listSparepart = new ArrayList<>();
     private int selectedItem = -1;
 
@@ -78,7 +79,6 @@ public class ControllerDetailKerusakanKendaraanMontir extends MouseAdapter imple
                 view.setTxtDetail(modelKendaraan.daftarKerusakan().get(selectedItem).toString());
                 view.getCbStatus().setSelectedItem(modelKendaraan.daftarKerusakan().get(selectedItem).getStatus());
             }
-
         }
     }
 

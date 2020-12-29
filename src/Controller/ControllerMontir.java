@@ -20,8 +20,6 @@ public class ControllerMontir extends MouseAdapter implements ActionListener, Co
 
     private MontirDashboard view;
     private ModelManusia model;
-    private int selectedItem = -1;
-
     public ControllerMontir(Manusia u) {
         view = new MontirDashboard();
         try {
@@ -51,13 +49,6 @@ public class ControllerMontir extends MouseAdapter implements ActionListener, Co
         }
     }
 
-    @Override
-    public void mousePressed(MouseEvent me) {
-        Object source = me.getSource();
-        if (source.equals(view.getTblDikerjakan())) {
-            this.selectedItem = view.getTblDikerjakan().rowAtPoint(me.getPoint());
-        }
-    }
 
     @Override
     public void mouseClicked(MouseEvent me) {

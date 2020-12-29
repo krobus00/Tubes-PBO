@@ -45,7 +45,7 @@ public class ControllerRegistrasi implements ActionListener, Controller {
             msg.showMessage("Data tidak boleh kosong!", "Error", 2);
         } else {
             try {
-                if (model.checkUsername(model.getUser().getUsername())) {
+                if (model.checkUsername(username)) {
                     msg.showMessage("Username sudah digunakan", "Error", 2);
                 } else {
                     model.auth(nama, username, password, alamat);

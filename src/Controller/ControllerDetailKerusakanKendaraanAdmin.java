@@ -29,7 +29,7 @@ public class ControllerDetailKerusakanKendaraanAdmin extends MouseAdapter implem
     private Kendaraan k;
     private ArrayList<Manusia> listMontir = new ArrayList<>();
 
-    private Currency c;
+    private Currency c = new Currency();
 
     public ControllerDetailKerusakanKendaraanAdmin(Kendaraan k) {
         this.k = k;

@@ -25,7 +25,6 @@ public class ControllerPelanggan extends MouseAdapter implements ActionListener,
     private ModelManusia model;
     private Manusia u;
     private ArrayList<Kendaraan> daftarKendaraan = new ArrayList<>();
-    private int selectedItem;
 
     public ControllerPelanggan(Manusia u) {
         view = new View.PelangganDashboard();
@@ -58,14 +57,6 @@ public class ControllerPelanggan extends MouseAdapter implements ActionListener,
     }
 
     @Override
-    public void mousePressed(MouseEvent me) {
-        Object source = me.getSource();
-        if (source.equals(view.getTblKendaraan())) {
-            this.selectedItem = view.getTblKendaraan().rowAtPoint(me.getPoint());
-        }
-    }
-
-    @Override
     public void mouseClicked(MouseEvent me) {
         Object source = me.getSource();
         if (source.equals(view.getTblKendaraan())) {
@@ -74,7 +65,6 @@ public class ControllerPelanggan extends MouseAdapter implements ActionListener,
                 if (i >= 0) {
                     new ControllerDetailKerusakanKendaraanPelanggan(model.getPelanggan().daftarKendaraan().get(i));
                 }
-
             }
         }
     }
