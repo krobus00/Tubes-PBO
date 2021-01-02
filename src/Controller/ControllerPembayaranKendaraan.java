@@ -62,6 +62,8 @@ public class ControllerPembayaranKendaraan extends MouseAdapter implements Actio
             updateStatus();
         } else if (source.equals(view.getBtnGunakan())) {
             gunakanKodeVoucher();
+        } else if(source.equals(view.getBtnBayar())){
+            Bayar();
         }
     }
 
@@ -132,6 +134,7 @@ public class ControllerPembayaranKendaraan extends MouseAdapter implements Actio
     private void Bayar() {
         try {
             modelAdmin.Pembayaran(p);
+            msg.showMessage("Pembayaran berhasil", "Success", 1);
         } catch (SQLException ex) {
             msg.showMessage(ex.getMessage(), "Error", 0);
         }

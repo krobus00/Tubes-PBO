@@ -11,9 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
-import Kendaraan.Kendaraan;
 import Manusia.Manusia;
 import View.AdminDashboard;
 
@@ -22,7 +20,6 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
     private AdminDashboard view;
     private ModelAdmin model;
     private Manusia u;
-    private ArrayList<Kendaraan> daftarKendaraan = new ArrayList<>();
     private int selectedItem = -1;
 
     public ControllerAdmin(Manusia u) {
@@ -109,7 +106,6 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
             } else if (source.equals(view.getTblPembayaranKendaraan())) {
                 int i = view.getTblPembayaranKendaraan().rowAtPoint(me.getPoint());
                 if (i >= 0) {
-
                     new ControllerPembayaranKendaraan(model.daftarPembayaranKendaraan().get(i));
                 }
             }

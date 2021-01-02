@@ -15,8 +15,7 @@ import javax.swing.JFrame;
 import Admin.Sparepart;
 import View.TambahSparepart;
 
-
-public class ControllerTambahSparepart implements ActionListener,Controller {
+public class ControllerTambahSparepart implements ActionListener, Controller {
 
     private TambahSparepart view;
     private ModelAdmin model;
@@ -29,7 +28,7 @@ public class ControllerTambahSparepart implements ActionListener,Controller {
         try {
             model = new ModelAdmin();
         } catch (SQLException ex) {
-           msg.showMessage(ex.getMessage(), "Error", 0);
+            msg.showMessage(ex.getMessage(), "Error", 0);
         }
         view.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         view.addActionListener(this);
@@ -43,7 +42,7 @@ public class ControllerTambahSparepart implements ActionListener,Controller {
         try {
             model = new ModelAdmin();
         } catch (SQLException ex) {
-           msg.showMessage(ex.getMessage(), "Error", 0);
+            msg.showMessage(ex.getMessage(), "Error", 0);
         }
         view.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         view.addActionListener(this);
@@ -74,10 +73,10 @@ public class ControllerTambahSparepart implements ActionListener,Controller {
                     view.getSpnJumlah()
             );
             model.Edit(this.data);
-           msg.showMessage("Sparepart berhasil diedit", "Success", 1);
+            msg.showMessage("Sparepart berhasil diedit", "Success", 1);
             view.dispose();
         } catch (SQLException ex) {
-           msg.showMessage(ex.getMessage(), "Error", 0);
+            msg.showMessage(ex.getMessage(), "Error", 0);
         }
     }
 
@@ -90,10 +89,10 @@ public class ControllerTambahSparepart implements ActionListener,Controller {
                     view.getSpnHarga(),
                     view.getSpnJumlah()
             ));
-           msg.showMessage("Sparepart berhasil ditambahkan", "Success", 1);
+            msg.showMessage("Sparepart berhasil ditambahkan", "Success", 1);
             view.resetView();
         } catch (SQLException ex) {
-           msg.showMessage(ex.getMessage(), "Error", 0);
+            msg.showMessage(ex.getMessage(), "Error", 0);
         }
     }
 

@@ -132,7 +132,7 @@ public class ModelAdmin extends Database implements InterfaceAdmin {
         query += "'" + s.getMerk() + "',";
         query += "'" + s.getBagian() + "',";
         query += s.getHarga() + ",";
-        query += s.getHarga();
+        query += s.getJumlah();
         query += ")";
         stmt.executeUpdate(query);
         disconnect();
@@ -392,7 +392,7 @@ public class ModelAdmin extends Database implements InterfaceAdmin {
 
     public void Pembayaran(Pembayaran p) throws SQLException {
         connect();
-        String query = "UPDATE kendaraan SET status='Lunas', keluar=GETDATE()";
+        String query = "UPDATE kendaraan SET status='Lunas', keluar=CURRENT_TIMESTAMP()";
         query += "WHERE id=" + p.getIdkendaraan();
         stmt.executeUpdate(query);
         disconnect();
