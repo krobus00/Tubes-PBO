@@ -102,8 +102,7 @@ INSERT INTO `user` (`id`, `nama`, `username`, `password`, `alamat`, `level`) VAL
 (1, 'Michael Putera Wardana', 'michael', 'asd', 'jl asdasd asdasd', 'admin'),
 (2, 'Yogi', 'yogi', 'asd', 'dasdasd', 'pelanggan'),
 (4, 'Iqbal', 'Iqbal', 'asd', 'asdasdasd', 'montir'),
-(5, 'Jamet111', 'jamet02', '123', 'jl jamet ini bous', 'montir'),
-(6, 'pelanggan', 'pelanggan', 'asd', 'asdasd', 'montir');
+(6, 'pelanggan', 'pelanggan', 'asd', 'asdasd', 'pelanggan');
 
 -- --------------------------------------------------------
 

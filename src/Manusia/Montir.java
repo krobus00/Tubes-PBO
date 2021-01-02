@@ -22,7 +22,7 @@ public class Montir extends Database implements InterfaceManusia {
     public Montir(Manusia u) throws SQLException {
         this.u = u;
         this.LoadData();
-        LoadData(u.getId());
+        this.LoadData(u.getId());
     }
 
     @Override
@@ -101,7 +101,7 @@ public class Montir extends Database implements InterfaceManusia {
 
     private void kurangiStok(int id) throws SQLException {
         connect();
-        String query = "UPDATE sparepart SET juml=\"ah = jumlah - 1 WHERE id=" + id;
+        String query = "UPDATE sparepart SET jumlah = jumlah - 1 WHERE id=" + id;
         stmt.executeUpdate(query);
         disconnect();
     }

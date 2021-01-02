@@ -19,7 +19,7 @@ public class ControllerDetailKerusakanKendaraanPelanggan extends MouseAdapter im
     private DetailKerusakanKendaraanPelanggan view;
     private ModelKendaraan model;
     private Kendaraan k;
-    private Currency c;
+    private Currency c = new Currency();
 
     public ControllerDetailKerusakanKendaraanPelanggan(Kendaraan k) {
         this.k = k;

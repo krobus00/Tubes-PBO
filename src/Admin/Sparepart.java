@@ -58,7 +58,6 @@ public class Sparepart extends AbstractAdmin{
 
     @Override
     public Object[] getData() {
-
         return new Object[]{this.nama, this.merk, this.bagian, this.harga, this.jumlah};
     }
 

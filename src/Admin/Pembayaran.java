@@ -5,7 +5,6 @@
  */
 package Admin;
 
-
 public class Pembayaran {
 
     private int idkendaraan;
@@ -21,6 +20,7 @@ public class Pembayaran {
 
     public void setDiskon(int potongan) {
         this.potongan = potongan;
+        hitungDiskon();
     }
 
     public void hitungDiskon() {

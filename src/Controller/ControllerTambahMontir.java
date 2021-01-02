@@ -51,7 +51,7 @@ public class ControllerTambahMontir implements ActionListener,Controller {
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
         if (source.equals(view.getBtnTambah())) {
-            if (view.getBtnTambah().getText() == "Tambah") {
+            if (view.getBtnTambah().getText().equals("Tambah")) {
                 tambah();
             } else {
                 update();
@@ -80,14 +80,13 @@ public class ControllerTambahMontir implements ActionListener,Controller {
 
     public void tambah() {
         try {
-//            Manusia u = new Manusia(name, username, password, alamat)
             model.Tambah(new Manusia(
                     view.getTxtNama(),
                     view.getTxtUsername(),
                     view.getTxtPassword(),
                     view.getTxtAlamat()
             ));
-           msg.showMessage("Sparepart berhasil ditambahkan", "Success", 1);
+           msg.showMessage("Montir berhasil ditambahkan", "Success", 1);
             view.resetView();
         } catch (SQLException ex) {
            msg.showMessage(ex.getMessage(), "Error", 0);

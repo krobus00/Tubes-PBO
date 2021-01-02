@@ -220,6 +220,13 @@ public class ModelAdmin extends Database implements InterfaceAdmin {
         stmt.executeUpdate(query);
         disconnect();
     }
+    public void HapusMontir(int id) throws SQLException {
+        connect();
+        String query = "DELETE FROM user WHERE id=";
+        query += id;
+        stmt.executeUpdate(query);
+        disconnect();
+    }
 
     public String getNamaByIDKendaraan(int id) throws SQLException {
         connect();

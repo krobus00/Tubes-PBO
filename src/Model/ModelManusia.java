@@ -33,10 +33,12 @@ public class ModelManusia {
 
     public void setPelanggan(Manusia u) {
         this.p = new Pelanggan(u);
+        this.u = u;
     }
 
     public void setMontir(Manusia u) throws SQLException {
         this.m = new Montir(u);
+        this.u = u;
     }
 
     public Manusia getUser() {

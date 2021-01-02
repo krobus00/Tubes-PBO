@@ -6,21 +6,16 @@
 package Controller;
 
 import Model.ModelAdmin;
-import Model.ModelKendaraan;
-import database.Database;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import Kendaraan.Kendaraan;
 import Manusia.Manusia;
 import View.AdminDashboard;
-
 
 public class ControllerAdmin extends MouseAdapter implements ActionListener, Controller {
 
@@ -36,7 +31,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
         try {
             model = new ModelAdmin();
         } catch (SQLException e) {
-           msg.showMessage(e.getMessage(), "Error", 0);
+            msg.showMessage(e.getMessage(), "Error", 0);
         }
         view.setNama(u.getNama());
         view.addActionListener(this);
@@ -71,6 +66,8 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
             new ControllerTambahMontir();
         } else if (source.equals(view.getBtnEditMontir())) {
             EditMontir();
+        }else if (source.equals(view.getBtnHapusMontir())){
+            HapusMontir();
         } else if (source.equals(view.getBtnCariKendaraan())) {
             CariKendaraan(view.getTxtCariKendaraan());
         } else if (source.equals(view.getBtnCariMontir())) {
@@ -113,7 +110,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
                 int i = view.getTblPembayaranKendaraan().rowAtPoint(me.getPoint());
                 if (i >= 0) {
 
-                    new ControllerDetailKerusakanKendaraanAdmin(model.daftarPembayaranKendaraan().get(i));
+                    new ControllerPembayaranKendaraan(model.daftarPembayaranKendaraan().get(i));
                 }
             }
         }
@@ -129,7 +126,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
             this.loadVoucher();
             this.loadPembayranKendaraan();
         } catch (SQLException ex) {
-           msg.showMessage(ex.getMessage(), "Error", 0);
+            msg.showMessage(ex.getMessage(), "Error", 0);
         }
     }
 
@@ -138,7 +135,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
             model.cariKendaraanPembayaran(k);
             loadPembayranKendaraan();
         } catch (SQLException ex) {
-           msg.showMessage("Gagal load kendaraan", "Error", 0);
+            msg.showMessage("Gagal load kendaraan", "Error", 0);
         }
     }
 
@@ -147,7 +144,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
             model.cariVoucher(v);
             loadVoucher();
         } catch (SQLException ex) {
-           msg.showMessage("Gagal load voucher", "Error", 0);
+            msg.showMessage("Gagal load voucher", "Error", 0);
         }
     }
 
@@ -156,7 +153,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
             model.cariSparepart(s);
             loadSparepart();
         } catch (SQLException ex) {
-           msg.showMessage("Gagal load sparepart", "Error", 0);
+            msg.showMessage("Gagal load sparepart", "Error", 0);
         }
     }
 
@@ -165,7 +162,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
             model.cariMontir(m);
             loadMontir();
         } catch (SQLException ex) {
-           msg.showMessage("Gagal load montir", "Error", 0);
+            msg.showMessage("Gagal load montir", "Error", 0);
         }
     }
 
@@ -174,7 +171,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
             model.cariKendaraan(k);
             loadKendaraan();
         } catch (SQLException ex) {
-           msg.showMessage("Gagal load kendaraan", "Error", 0);
+            msg.showMessage("Gagal load kendaraan", "Error", 0);
         }
     }
 
@@ -223,15 +220,14 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
         if (selectedItem >= 0) {
             try {
                 model.HapusSparepart(model.daftarSparepart().get(selectedItem).getId());
-               msg.showMessage("Sparepart berhasil dihapus", "Success", 1);
+                msg.showMessage("Sparepart berhasil dihapus", "Success", 1);
                 refreshData();
                 this.selectedItem = -1;
             } catch (Exception ex) {
-               msg.showMessage(ex.getMessage(), "Error", 0);
+                msg.showMessage(ex.getMessage(), "Error", 0);
             }
-
         } else {
-           msg.showMessage("Pilih sparepart terlebih dahulu!", "Error", 0);
+            msg.showMessage("Pilih sparepart terlebih dahulu!", "Error", 0);
         }
     }
 
@@ -239,7 +235,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
         if (selectedItem >= 0) {
             new ControllerTambahSparepart(model.daftarSparepart().get(selectedItem));
         } else {
-           msg.showMessage("Pilih sparepart terlebih dahulu!", "Error", 0);
+            msg.showMessage("Pilih sparepart terlebih dahulu!", "Error", 0);
         }
     }
 
@@ -247,7 +243,7 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
         if (selectedItem >= 0) {
             new ControllerTambahVoucher(model.daftarVoucher().get(selectedItem));
         } else {
-           msg.showMessage("Pilih voucher terlebih dahulu!", "Error", 0);
+            msg.showMessage("Pilih voucher terlebih dahulu!", "Error", 0);
         }
     }
 
@@ -255,15 +251,15 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
         if (selectedItem >= 0) {
             try {
                 model.HapusVoucher(model.daftarVoucher().get(selectedItem).getId());
-               msg.showMessage("Voucher berhasil dihapus", "Success", 1);
+                msg.showMessage("Voucher berhasil dihapus", "Success", 1);
                 refreshData();
                 this.selectedItem = -1;
             } catch (Exception ex) {
-               msg.showMessage(ex.getMessage(), "Error", 0);
+                msg.showMessage(ex.getMessage(), "Error", 0);
             }
 
         } else {
-           msg.showMessage("Pilih voucher terlebih dahulu!", "Error", 0);
+            msg.showMessage("Pilih voucher terlebih dahulu!", "Error", 0);
         }
     }
 
@@ -271,7 +267,21 @@ public class ControllerAdmin extends MouseAdapter implements ActionListener, Con
         if (selectedItem >= 0) {
             new ControllerTambahMontir(model.daftarMontir().get(selectedItem));
         } else {
-           msg.showMessage("Pilih montir terlebih dahulu!", "Error", 0);
+            msg.showMessage("Pilih montir terlebih dahulu!", "Error", 0);
+        }
+    }
+    public void HapusMontir(){
+        if (selectedItem >= 0) {
+            try {
+                model.HapusMontir(model.daftarMontir().get(selectedItem).getId());
+                msg.showMessage("Montir berhasil dihapus", "Success", 1);
+                refreshData();
+                this.selectedItem = -1;
+            } catch (Exception ex) {
+                msg.showMessage(ex.getMessage(), "Error", 0);
+            }
+        } else {
+            msg.showMessage("Pilih montir terlebih dahulu!", "Error", 0);
         }
     }
 }

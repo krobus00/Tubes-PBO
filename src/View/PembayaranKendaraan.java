@@ -529,6 +529,7 @@ public class PembayaranKendaraan extends javax.swing.JFrame {
 
     public void setTotalHarga(String harga) {
         this.lblTotalHarga.setText("Total : " + harga);
+        this.lblTotalHarga1.setText("Total : " + harga);
     }
 
     public void setDetailKendaraan(String pemilik, String nomor, String nama, String jenis, String keterangan, String masuk, String keluar, String status) {

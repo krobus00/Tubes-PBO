@@ -30,7 +30,7 @@ public class ControllerPembayaranKendaraan extends MouseAdapter implements Actio
     private ModelAdmin modelAdmin;
     private Kendaraan k;
     private Pembayaran p;
-    private Currency c;
+    private Currency c = new Currency();
     private ArrayList<Manusia> listMontir = new ArrayList<>();
     private double totalharga = 0;
     private int potongan = 0;
